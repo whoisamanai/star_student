@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Appreciation Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Anonymous voting • 10 points per vote</p>
+        <h1>Student Appreciation Board</h1>
+        <p class="subtitle">
+          Celebrate your favorite classmates with a simple, positive shout-out. One vote per
+          person.
+        </p>
+      </header>
+
+      <section class="card" aria-labelledby="vote-title">
+        <h2 id="vote-title">Cast your vote</h2>
+        <form id="vote-form" class="form">
+          <label class="field">
+            <span>Student name</span>
+            <input type="text" id="student-name" name="studentName" placeholder="e.g., Aisha" required />
+          </label>
+          <label class="field">
+            <span>Department</span>
+            <input
+              type="text"
+              id="student-dept"
+              name="studentDept"
+              placeholder="e.g., MCA"
+              required
+            />
+          </label>
+          <button type="submit" class="primary-btn">Submit vote</button>
+          <p id="vote-message" class="message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="leaderboard-title">
+        <div class="leaderboard-header">
+          <h2 id="leaderboard-title">Leaderboard</h2>
+          <button id="refresh-btn" class="ghost-btn" type="button">Refresh</button>
+        </div>
+        <ol id="leaderboard" class="leaderboard"></ol>
+        <p id="leaderboard-empty" class="message muted">No votes yet. Be the first!</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built with HTML, CSS, JavaScript, and Firebase.</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
